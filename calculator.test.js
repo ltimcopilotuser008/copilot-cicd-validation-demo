@@ -28,4 +28,4 @@ describe("divideNumbers", () => {
     expect(divideNumbers(5.5, 2)).toBeCloseTo(2.75);
     expect(divideNumbers(5, 2.5)).toBeCloseTo(2);
   });
-});
+});//tests

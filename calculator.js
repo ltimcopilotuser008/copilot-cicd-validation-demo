@@ -10,4 +10,4 @@ function divideNumbers(a, b) {
   return a / b;
 }
 
-module.exports = { divideNumbers };
+module.exports = { divideNumbers }; // Export the function for use in other files
