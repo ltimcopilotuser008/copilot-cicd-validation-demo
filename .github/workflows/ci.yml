@@ -1,0 +1,25 @@
+# Create a GitHub Actions CI workflow for a Node.js project.
+# The workflow should run on push and pull_request to the main branch.
+# It should use the latest Ubuntu runner.
+# It should set up Node.js version 20.
+# It should install dependencies using npm ci.
+# It should run npm test as a validation check.
+name: CI
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20'
+      - name: Install dependencies
+        run: npm ci
+      - name: Run tests
+        run: npm test
